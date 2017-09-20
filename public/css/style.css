@@ -1,0 +1,2 @@
+#barf li { opacity: 0.2; -webkit-transition: 1s opacity; -o-transition: 1s opacity; transition: 1s opacity; }
+#barf li.loaded { opacity: 1;  }
