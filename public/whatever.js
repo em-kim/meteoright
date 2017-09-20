@@ -7,8 +7,10 @@ var queryUrlString = "https://data.nasa.gov/resource/y77d-th95.json";
 		var pizzaNose = document.getElementById('barf');
 
 		for (let i = 0; i < 10; i++){
-			
-			pizzaNose.innerText += meteoriteData[i].name + "\n";
-		}
+			setTimeout(function(){
+				$(pizzaNose).append("<li>" + meteoriteData[i].name + "</li>").fadeIn(50);
+				$("li").addClass('loaded');
+			}, 80 * i); 
+		}  
 	});
 });
