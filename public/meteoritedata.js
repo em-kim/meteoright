@@ -19,6 +19,7 @@ var meteorites = [{"fall":"Fell","geolocation":{"type":"Point","coordinates":[6.
 ,{"fall":"Fell","geolocation":{"type":"Point","coordinates":[39.51667,24.41667]},"id":"446","mass":"160","name":"Al Rais","nametype":"Valid","recclass":"CR2-an","reclat":"24.416670","reclong":"39.516670","year":"1957-01-01T00:00:00.000"}
 ,{"fall":"Fell","geolocation":{"type":"Point","coordinates":[28.96,13.66033]},"id":"447","mass":"700","name":"Al Zarnkh","nametype":"Valid","recclass":"LL5","reclat":"13.660330","reclong":"28.960000","year":"2001-01-01T00:00:00.000"}]
 
+//mimicking an API call
 var fetchMeteorites = function(){
 	let a = [];
 	meteorites.forEach(m=>{
@@ -30,5 +31,5 @@ var fetchMeteorites = function(){
 var nameElement = document.getElementById('barf');
 
 fetchMeteorites().forEach(m=>{
-	nameElement.innerText += m.name;
+	nameElement.innerHTML += "<li>" + m.name + "</li>";
 });
