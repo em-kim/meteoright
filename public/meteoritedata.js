@@ -33,3 +33,6 @@ var nameElement = document.getElementById('barf');
 fetchMeteorites().forEach(m=>{
 	nameElement.innerHTML += "<li>" + m.name + "</li>";
 });
+
+var titleElement = document.getElementById('meteorTitle');
+titleElement.style.color = "brown";
