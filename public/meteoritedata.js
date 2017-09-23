@@ -30,8 +30,13 @@ var fetchMeteorites = function(){
 
 var nameElement = document.getElementById('barf');
 
-fetchMeteorites().forEach(m=>{
-	nameElement.innerHTML += "<li>" + m.name + "</li>";
+var i = 0;
+fetchMeteorites().forEach(m => {
+  setTimeout(function () {
+    var listitem = "<li>" + m.name + "</li>";
+    $(nameElement).append(listitem).fadeIn(50);
+  }, 80 * i);
+  i++;
 });
 
 var titleElement = document.getElementById('meteorTitle');
