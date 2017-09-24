@@ -31,9 +31,17 @@ var fetchMeteorites = function(){
 var nameElement = document.getElementById('barf');
 
 var i = 0;
+
+
 fetchMeteorites().forEach(m => {
+
+  console.log(m.year);
+
   setTimeout(function () {
-    var listitem = "<li>" + m.name + "</li>";
+
+    var date = new Date(m.year); 
+    var year = date.getFullYear();
+    var listitem = "<li>" + m.name + " : " + year + "</li>";
     $(nameElement).append(listitem).fadeIn(50);
   }, 80 * i);
   i++;
