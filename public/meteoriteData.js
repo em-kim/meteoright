@@ -30,11 +30,13 @@ var fetchMeteorites = function(){
 
 var nameElement = document.getElementById('barf');
 
-fetchMeteorites().forEach(m=>{
-	// API returns year as a time string so we have to convert it to year
-	var date = new Date(m.year); 
-	var year = date.getFullYear();
-	nameElement.innerHTML += "<li>" + m.name + " : " + year + "</li>";
+var i = 0;
+fetchMeteorites().forEach(m => {
+  setTimeout(function () {
+    var listitem = "<li>" + m.name + "</li>";
+    $(nameElement).append(listitem).fadeIn(50);
+  }, 80 * i);
+  i++;
 });
 
 var titleElement = document.getElementById('meteorTitle');
