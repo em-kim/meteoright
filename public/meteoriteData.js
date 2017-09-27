@@ -23,7 +23,8 @@ var meteorites = [{"fall":"Fell","geolocation":{"type":"Point","coordinates":[6.
 var fetchMeteorites = function(){
 	let a = [];
 	meteorites.forEach(m=>{
-    		a.push(m);
+    
+    a.push(m);
   });
   	return a;
 }
